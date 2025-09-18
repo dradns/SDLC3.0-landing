@@ -4,6 +4,11 @@ import ProblemsSection from "@/components/ProblemsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import RequirementsSection from "@/components/RequirementsSection";
 import MetricsSection from "@/components/MetricsSection";
+import SDLCDiagram from "@/components/SDLCDiagram";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import CasesSection from "@/components/CasesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   return (
@@ -12,8 +17,13 @@ const Index = () => {
       <WhatIsSection />
       <ProblemsSection />
       <HowItWorksSection />
+      <SDLCDiagram />
       <RequirementsSection />
+      <BeforeAfterSlider />
       <MetricsSection />
+      <CasesSection />
+      <TestimonialsSection />
+      <FAQSection />
     </div>
   );
 };
