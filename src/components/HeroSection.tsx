@@ -40,21 +40,49 @@ const HeroSection = () => {
 
           {/* Metrics Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">30-50%</div>
-              <div className="text-sm text-muted-foreground">Ускорение разработки</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[160px] flex flex-col">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">30-50%</div>
+                <div className="text-sm text-muted-foreground mb-4">Ускорение разработки</div>
+              </div>
+              <div className="mt-auto">
+                <div className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs font-medium">
+                  3 раза быстрее
+                </div>
+              </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">80%</div>
-              <div className="text-sm text-muted-foreground">Покрытие тестами</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[160px] flex flex-col">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">80%</div>
+                <div className="text-sm text-muted-foreground mb-4">Покрытие тестами</div>
+              </div>
+              <div className="mt-auto">
+                <div className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs font-medium">
+                  Несколько раз в неделю
+                </div>
+              </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
-              <div className="text-sm text-muted-foreground">Снижение MTTR</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[160px] flex flex-col">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
+                <div className="text-sm text-muted-foreground mb-4">Снижение MTTR</div>
+              </div>
+              <div className="mt-auto">
+                <div className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs font-medium">
+                  На 70% меньше откатов
+                </div>
+              </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">10→3</div>
-              <div className="text-sm text-muted-foreground">Дни до релиза</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[160px] flex flex-col">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">10→3</div>
+                <div className="text-sm text-muted-foreground mb-4">Дни до релиза</div>
+              </div>
+              <div className="mt-auto">
+                <div className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs font-medium">
+                  MTTR в 2-3 раза меньше
+                </div>
+              </div>
             </div>
           </div>
         </div>
