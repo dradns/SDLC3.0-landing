@@ -88,7 +88,7 @@ const MetricsSection = () => {
               <div className="relative z-10">
                 <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{metric.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{metric.description}</p>
-                <div className="flex items-center justify-center h-10 bg-gradient-to-r from-success/10 to-success/20 text-success text-sm font-semibold px-6 rounded-full min-w-[160px] shadow-sm border border-success/20 mt-6">
+                <div className="flex items-center justify-center h-10 bg-gradient-to-r from-success/10 to-success/20 text-success text-sm font-semibold px-6 rounded-full min-w-[160px] shadow-sm border border-success/20">
                   {metric.improvement}
                 </div>
               </div>
