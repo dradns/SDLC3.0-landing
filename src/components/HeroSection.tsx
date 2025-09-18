@@ -10,6 +10,9 @@ const HeroSection = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       
+      {/* Gradient overlay for lightening effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60"></div>
+      
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
