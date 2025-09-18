@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { FileText, Layers, Code, Eye, TestTube, Headphones, Brain, ArrowRight } from "lucide-react";
+import { FileText, Layers, Code, Eye, TestTube, Headphones, Bot, ArrowRight } from "lucide-react";
 const SDLCDiagram = () => {
   const [activeStep, setActiveStep] = useState(0);
   const steps = [{
@@ -110,7 +110,7 @@ const SDLCDiagram = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-custom-xl relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-                <Brain className="w-12 h-12 text-primary-foreground relative z-10" />
+                <Bot className="w-12 h-12 text-primary-foreground relative z-10" />
               </div>
               <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 text-center">
                 
@@ -132,7 +132,7 @@ const SDLCDiagram = () => {
                 <p className="text-muted-foreground mb-3 leading-relaxed">{steps[activeStep]?.description}</p>
                 <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
                   <div className="flex items-center gap-2 mb-2">
-                    <Brain className="w-4 h-4 text-primary" />
+                    <Bot className="w-4 h-4 text-primary" />
                     <span className="text-sm font-medium text-primary">Роль AI:</span>
                   </div>
                   <p className="text-sm text-foreground leading-relaxed">{steps[activeStep]?.aiRole}</p>
