@@ -39,22 +39,30 @@ const HeroSection = () => {
           </p>
 
           {/* Metrics Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
-              <div className="text-3xl font-bold text-primary mb-2">30-50%</div>
-              <div className="text-sm text-muted-foreground">Ускорение разработки</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 h-32 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">30-50%</div>
+                <div className="text-sm text-muted-foreground leading-tight">Ускорение разработки</div>
+              </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
-              <div className="text-3xl font-bold text-primary mb-2">80%</div>
-              <div className="text-sm text-muted-foreground">Покрытие тестами</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 h-32 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">80%</div>
+                <div className="text-sm text-muted-foreground leading-tight">Покрытие тестами</div>
+              </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
-              <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
-              <div className="text-sm text-muted-foreground">Снижение MTTR</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 h-32 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
+                <div className="text-sm text-muted-foreground leading-tight">Снижение MTTR</div>
+              </div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
-              <div className="text-3xl font-bold text-primary mb-2">10→3</div>
-              <div className="text-sm text-muted-foreground">Дни до релиза</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 h-32 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col justify-center">
+                <div className="text-3xl font-bold text-primary mb-2">10→3</div>
+                <div className="text-sm text-muted-foreground leading-tight">Дни до релиза</div>
+              </div>
             </div>
           </div>
         </div>
