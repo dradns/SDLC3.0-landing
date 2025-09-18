@@ -11,50 +11,52 @@ const SDLCDiagram = () => {
       icon: FileText,
       title: "Постановка задачи",
       description: "AI формулирует user stories, находит пробелы в требованиях",
-      aiRole: "Анализирует контекст, предлагает улучшения ТЗ, генерирует acceptance criteria",
-      position: { x: 10, y: 20 }
+      aiRole: "Анализирует контекст, предлагает улучшения ТЗ, генерирует acceptance criteria"
     },
     {
       id: 1,
       icon: Layers,
       title: "Проектирование",
       description: "AI предлагает архитектурные варианты, предупреждает об ошибках",
-      aiRole: "Проверяет совместимость с существующей архитектурой, предлагает паттерны",
-      position: { x: 30, y: 10 }
+      aiRole: "Проверяет совместимость с существующей архитектурой, предлагает паттерны"
     },
     {
       id: 2,
       icon: Code,
       title: "Разработка",
       description: "AI генерирует шаблонный код, миграции и автотесты",
-      aiRole: "Создает boilerplate код, предлагает рефакторинг, генерирует документацию",
-      position: { x: 50, y: 5 }
+      aiRole: "Создает boilerplate код, предлагает рефакторинг, генерирует документацию"
     },
     {
       id: 3,
       icon: Eye,
       title: "Code Review",
       description: "AI проверяет PR, находит баги, предлагает исправления",
-      aiRole: "Анализирует качество кода, находит security issues, проверяет стиль",
-      position: { x: 70, y: 10 }
+      aiRole: "Анализирует качество кода, находит security issues, проверяет стиль"
     },
     {
       id: 4,
       icon: TestTube,
       title: "Тестирование",
       description: "AI запускает только нужные тесты, прогнозирует риск релиза",
-      aiRole: "Определяет scope тестирования, анализирует coverage, предсказывает баги",
-      position: { x: 90, y: 20 }
+      aiRole: "Определяет scope тестирования, анализирует coverage, предсказывает баги"
     },
     {
       id: 5,
       icon: Headphones,
       title: "Поддержка",
       description: "AI классифицирует баги, ищет корневую причину проблем",
-      aiRole: "Анализирует логи, группирует инциденты, предлагает hotfix",
-      position: { x: 70, y: 40 }
+      aiRole: "Анализирует логи, группирует инциденты, предлагает hotfix"
     }
   ];
+
+  // Calculate positions for perfect circle
+  const getStepPosition = (index: number, total: number, radius: number = 35) => {
+    const angle = (index * 2 * Math.PI) / total - Math.PI / 2; // Start from top
+    const x = 50 + radius * Math.cos(angle); // Center at 50%
+    const y = 50 + radius * Math.sin(angle); // Center at 50%
+    return { x, y };
+  };
 
   return (
     <section className="py-20 px-4 bg-secondary/20">
@@ -70,70 +72,109 @@ const SDLCDiagram = () => {
 
         <div className="relative">
           {/* Main diagram */}
-          <div className="relative h-96 bg-gradient-card rounded-2xl border border-card-border shadow-custom-lg overflow-hidden">
-            {/* Connection lines */}
+          <div className="relative h-[500px] bg-gradient-card rounded-2xl border border-card-border shadow-custom-lg overflow-hidden">
+            {/* Connection lines - circular flow */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
-              {steps.slice(0, -1).map((step, index) => {
-                const nextStep = steps[index + 1];
+              {steps.map((step, index) => {
+                const currentPos = getStepPosition(index, steps.length);
+                const nextPos = getStepPosition((index + 1) % steps.length, steps.length);
+                
                 return (
                   <line
                     key={index}
-                    x1={`${step.position.x + 5}%`}
-                    y1={`${step.position.y + 10}%`}
-                    x2={`${nextStep.position.x + 5}%`}
-                    y2={`${nextStep.position.y + 10}%`}
+                    x1={`${currentPos.x}%`}
+                    y1={`${currentPos.y}%`}
+                    x2={`${nextPos.x}%`}
+                    y2={`${nextPos.y}%`}
                     stroke="hsl(var(--primary))"
                     strokeWidth="2"
-                    strokeDasharray="5,5"
+                    strokeDasharray="8,4"
                     className={`transition-all duration-300 ${
-                      activeStep === index || activeStep === index + 1 
+                      activeStep === index || activeStep === (index + 1) % steps.length
                         ? 'opacity-100' 
-                        : 'opacity-30'
+                        : 'opacity-20'
+                    }`}
+                  />
+                );
+              })}
+              
+              {/* Lines from center to each step */}
+              {steps.map((step, index) => {
+                const stepPos = getStepPosition(index, steps.length);
+                return (
+                  <line
+                    key={`center-${index}`}
+                    x1="50%"
+                    y1="50%"
+                    x2={`${stepPos.x}%`}
+                    y2={`${stepPos.y}%`}
+                    stroke="hsl(var(--primary))"
+                    strokeWidth="1"
+                    strokeDasharray="3,3"
+                    className={`transition-all duration-300 ${
+                      activeStep === index ? 'opacity-60' : 'opacity-10'
                     }`}
                   />
                 );
               })}
             </svg>
 
-            {/* Steps */}
-            {steps.map((step) => (
-              <div
-                key={step.id}
-                className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300 ${
-                  activeStep === step.id ? 'scale-110 z-10' : 'scale-100 hover:scale-105'
-                }`}
-                style={{ 
-                  left: `${step.position.x}%`, 
-                  top: `${step.position.y}%` 
-                }}
-                onMouseEnter={() => setActiveStep(step.id)}
-              >
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
-                  activeStep === step.id 
-                    ? 'bg-primary border-primary shadow-custom-lg' 
-                    : 'bg-card border-primary/30 shadow-custom-md'
-                }`}>
-                  <step.icon className={`w-8 h-8 transition-colors duration-300 ${
-                    activeStep === step.id ? 'text-primary-foreground' : 'text-primary'
-                  }`} />
-                </div>
-                <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 text-center min-w-max">
-                  <div className={`text-sm font-medium transition-colors duration-300 ${
-                    activeStep === step.id ? 'text-primary' : 'text-foreground'
+            {/* Steps positioned in perfect circle */}
+            {steps.map((step, index) => {
+              const position = getStepPosition(index, steps.length);
+              return (
+                <div
+                  key={step.id}
+                  className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300 ${
+                    activeStep === step.id ? 'scale-110 z-10' : 'scale-100 hover:scale-105'
+                  }`}
+                  style={{ 
+                    left: `${position.x}%`, 
+                    top: `${position.y}%` 
+                  }}
+                  onMouseEnter={() => setActiveStep(step.id)}
+                >
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                    activeStep === step.id 
+                      ? 'bg-primary border-primary shadow-custom-lg shadow-primary/25' 
+                      : 'bg-card border-primary/30 shadow-custom-md hover:border-primary/50 hover:shadow-custom-lg'
                   }`}>
-                    {step.title}
+                    <step.icon className={`w-7 h-7 transition-colors duration-300 ${
+                      activeStep === step.id ? 'text-primary-foreground' : 'text-primary'
+                    }`} />
+                  </div>
+                  
+                  {/* Step label */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 text-center" 
+                       style={{
+                         top: position.y < 50 ? '100%' : 'auto',
+                         bottom: position.y >= 50 ? '100%' : 'auto',
+                         marginTop: position.y < 50 ? '8px' : 'auto',
+                         marginBottom: position.y >= 50 ? '8px' : 'auto',
+                         minWidth: 'max-content'
+                       }}>
+                    <div className={`text-sm font-medium transition-colors duration-300 px-2 py-1 rounded-md ${
+                      activeStep === step.id 
+                        ? 'text-primary bg-primary/10' 
+                        : 'text-foreground'
+                    }`}>
+                      {step.title}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             {/* AI Brain in center */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-custom-xl animate-pulse">
-                <Brain className="w-10 h-10 text-primary-foreground" />
+              <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-custom-xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+                <Brain className="w-12 h-12 text-primary-foreground relative z-10" />
               </div>
-              <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 text-center">
-                <div className="text-sm font-bold text-primary">AI Core</div>
+              <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 text-center">
+                <div className="text-sm font-bold text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/20">
+                  AI Core
+                </div>
               </div>
             </div>
           </div>
