@@ -75,15 +75,27 @@ const MetricsSection = () => {
         {/* Key metrics */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {metrics.map((metric, index) => (
-            <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <metric.icon className="w-6 h-6 text-primary" />
+            <Card key={index} className="relative p-8 bg-card/50 backdrop-blur-sm border border-primary/20 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-500 group text-center overflow-hidden">
+              {/* Background glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Icon with enhanced styling */}
+              <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-500 shadow-lg">
+                <metric.icon className="w-8 h-8 text-primary group-hover:text-primary" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{metric.title}</h3>
-              <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{metric.description}</p>
-              <div className="flex items-center justify-center h-8 bg-success/10 text-success text-sm font-medium px-4 rounded-full min-w-[140px]">
-                {metric.improvement}
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{metric.title}</h3>
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{metric.description}</p>
+                <div className="flex items-center justify-center h-10 bg-gradient-to-r from-success/10 to-success/20 text-success text-sm font-semibold px-6 rounded-full min-w-[160px] shadow-sm border border-success/20">
+                  {metric.improvement}
+                </div>
               </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-4 left-4 w-1 h-1 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             </Card>
           ))}
         </div>
