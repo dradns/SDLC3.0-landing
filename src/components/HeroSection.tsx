@@ -24,7 +24,7 @@ const HeroSection = () => {
             <span className="text-gradient">SDLC 3.0</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
             Новый подход к разработке, где AI помогает команде на всех этапах: от постановки задачи до релиза и поддержки продукта
           </p>
 
