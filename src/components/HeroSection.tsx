@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Target } from "lucide-react";
+import { Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -29,31 +28,24 @@ const HeroSection = () => {
             Новый подход к разработке, где AI помогает команде на всех этапах: от постановки задачи до релиза и поддержки продукта
           </p>
 
-          {/* Key benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Target className="w-4 h-4 text-primary" />
-              Меньше рутины
+          {/* Metrics Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-primary mb-2">30-50%</div>
+              <div className="text-sm text-muted-foreground">Ускорение разработки</div>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Zap className="w-4 h-4 text-primary" />
-              Быстрее релизы
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-primary mb-2">80%</div>
+              <div className="text-sm text-muted-foreground">Покрытие тестами</div>
             </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Target className="w-4 h-4 text-primary" />
-              Выше качество
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
+              <div className="text-sm text-muted-foreground">Снижение MTTR</div>
             </div>
-          </div>
-
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group shadow-custom-lg hover:shadow-custom-xl transition-all duration-300">
-              Узнать больше
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="shadow-custom-md">
-              Посмотреть примеры
-            </Button>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
+              <div className="text-3xl font-bold text-primary mb-2">10→3</div>
+              <div className="text-sm text-muted-foreground">Дни до релиза</div>
+            </div>
           </div>
         </div>
       </div>
