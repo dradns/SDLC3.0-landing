@@ -1,18 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Brain, Workflow, Rocket } from "lucide-react";
-
 const WhatIsSection = () => {
-  return (
-    <section className="py-20 px-4 bg-background">
+  return <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Что такое <span className="text-gradient">SDLC 3.0</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            SDLC 3.0 — это новый подход к разработке, в котором AI помогает команде на всех этапах: 
-            от постановки задачи до релиза и поддержки продукта
-          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">SDLC 3.0 — операционная модель разработки с интегрированным AI, который встроен в каждый этап жизненного цикла — от анализа требований до поддержки.
+        </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -53,8 +49,6 @@ const WhatIsSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhatIsSection;
