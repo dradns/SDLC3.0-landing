@@ -81,7 +81,7 @@ const MetricsSection = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">{metric.title}</h3>
               <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{metric.description}</p>
-              <div className="inline-block bg-success/10 text-success text-sm font-medium px-3 py-1 rounded-full">
+              <div className="flex items-center justify-center h-8 bg-success/10 text-success text-sm font-medium px-4 rounded-full min-w-[140px]">
                 {metric.improvement}
               </div>
             </Card>
