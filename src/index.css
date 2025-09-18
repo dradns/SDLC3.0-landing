@@ -119,6 +119,27 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Text shimmer animation */
+  @keyframes shimmer {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; text-shadow: 0 0 20px hsl(var(--primary) / 0.8); }
+    100% { opacity: 0.7; }
+  }
+
+  .shimmer-text {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .shimmer-text:nth-child(1) { animation-delay: 0s; }
+  .shimmer-text:nth-child(2) { animation-delay: 0.1s; }
+  .shimmer-text:nth-child(3) { animation-delay: 0.2s; }
+  .shimmer-text:nth-child(4) { animation-delay: 0.3s; }
+  .shimmer-text:nth-child(5) { animation-delay: 0.4s; }
+  .shimmer-text:nth-child(6) { animation-delay: 0.5s; }
+  .shimmer-text:nth-child(7) { animation-delay: 0.6s; }
+  .shimmer-text:nth-child(8) { animation-delay: 0.7s; }
+  .shimmer-text:nth-child(9) { animation-delay: 0.8s; }
 }
 
 @layer base {

@@ -31,7 +31,16 @@ const HeroSection = () => {
 
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            <span className="text-gradient">SDLC 3.0</span>
+            <span className="text-gradient">
+              <span className="shimmer-text">S</span>
+              <span className="shimmer-text">D</span>
+              <span className="shimmer-text">L</span>
+              <span className="shimmer-text">C</span>
+              <span className="shimmer-text">&nbsp;</span>
+              <span className="shimmer-text">3</span>
+              <span className="shimmer-text">.</span>
+              <span className="shimmer-text">0</span>
+            </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
