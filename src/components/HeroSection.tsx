@@ -1,4 +1,4 @@
-import { Zap, Clock, Gauge, Shield, TrendingUp } from "lucide-react";
+import { Zap } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -37,45 +37,6 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
             Новый подход к разработке, где AI помогает команде на всех этапах: от постановки задачи до релиза и поддержки продукта
           </p>
-
-          {/* Metrics Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[240px] flex flex-col">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Lead Time</h3>
-              <p className="text-sm text-muted-foreground mb-6 flex-1">Время от написания кода до релиза</p>
-              <div className="text-sm font-medium text-green-600">3 раза быстрее</div>
-            </div>
-            
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[240px] flex flex-col">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Частота релизов</h3>
-              <p className="text-sm text-muted-foreground mb-6 flex-1">Как часто обновляем продукт</p>
-              <div className="text-sm font-medium text-green-600">Несколько раз в неделю</div>
-            </div>
-            
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[240px] flex flex-col">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Стабильность релизов</h3>
-              <p className="text-sm text-muted-foreground mb-6 flex-1">Количество откатов и багов</p>
-              <div className="text-sm font-medium text-green-600">На 70% меньше откатов</div>
-            </div>
-            
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[240px] flex flex-col">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Время восстановления</h3>
-              <p className="text-sm text-muted-foreground mb-6 flex-1">Как быстро починили после сбоя</p>
-              <div className="text-sm font-medium text-green-600">MTTR в 2-3 раза меньше</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
