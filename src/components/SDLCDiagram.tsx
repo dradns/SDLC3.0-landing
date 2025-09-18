@@ -153,11 +153,11 @@ const SDLCDiagram = () => {
                          marginBottom: position.y >= 50 ? '8px' : 'auto',
                          minWidth: 'max-content'
                        }}>
-                    <div className={`text-sm font-medium transition-colors duration-300 px-2 py-1 rounded-md ${
-                      activeStep === step.id 
-                        ? 'text-primary bg-primary/10' 
-                        : 'text-foreground'
-                    }`}>
+                     <div className={`text-sm font-medium transition-colors duration-300 px-2 py-1 rounded-md ${
+                       activeStep === step.id 
+                         ? 'text-primary bg-card border border-primary/20' 
+                         : 'text-foreground bg-card border border-border'
+                     }`}>
                       {step.title}
                     </div>
                   </div>
@@ -172,7 +172,7 @@ const SDLCDiagram = () => {
                 <Brain className="w-12 h-12 text-primary-foreground relative z-10" />
               </div>
               <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 text-center">
-                <div className="text-sm font-bold text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/20">
+                <div className="text-sm font-bold text-primary bg-card px-3 py-1 rounded-full border border-primary/20">
                   AI Core
                 </div>
               </div>
