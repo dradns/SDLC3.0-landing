@@ -35,7 +35,8 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
-            AI-ориентированный жизненный цикл разработки: автоматизация, метрики, предсказуемая поставка
+            AI-ориентированный жизненный цикл разработки:<br />
+            автоматизация, метрики, предсказуемая поставка
           </p>
 
           {/* Metrics Cards */}
