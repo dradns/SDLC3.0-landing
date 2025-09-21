@@ -19,7 +19,7 @@ const TrainingSection = () => {
               Курс «Системный Аналитик 3.0» →
             </div>
           </a>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mt-4">
             Готовит специалистов для работы в новой парадигме разработки с AI
           </p>
         </div>
