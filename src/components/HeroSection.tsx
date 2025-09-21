@@ -34,9 +34,9 @@ const HeroSection = () => {
             <span className="text-gradient-animated">SDLC 3.0</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             <span className="text-gradient-animated font-bold text-2xl md:text-3xl">AI-ориентированный жизненный цикл разработки:</span><br />
-            автоматизация, метрики, предсказуемая поставка
+            <span className="mt-4 block font-bold text-lg">автоматизация  •  метрики  •  предсказуемая поставка</span>
           </p>
 
           {/* Metrics Cards */}
