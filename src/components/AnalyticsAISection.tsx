@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, GitBranch, BookOpen, TrendingUp, Settings, BarChart3, Zap } from "lucide-react";
+import { FileText, GitBranch, BookOpen, TrendingUp, Settings, BarChart3, Zap, Shield, Palette, Users } from "lucide-react";
 import { useState } from "react";
 
 const AnalyticsAISection = () => {
@@ -41,11 +41,50 @@ const AnalyticsAISection = () => {
       description: "Создание высокоуровневой архитектуры системы",
       capabilities: [
         "Диаграммы контекста",
+        "Диаграммы компонентов",
         "Архитектурные решения",
-        "Компонентные диаграммы",
-        "Интеграционные схемы"
+        "Системная интеграция"
       ],
       improvement: "70-80%"
+    },
+    {
+      id: "reviewer",
+      icon: Shield,
+      title: "Ревьюер",
+      description: "Контроль качества артефактов и архитектурных решений",
+      capabilities: [
+        "Проверка качества требований",
+        "Аудит кибербезопасности",
+        "Валидация архитектуры",
+        "Инженерная поддержка"
+      ],
+      improvement: "50-60%"
+    },
+    {
+      id: "designer",
+      icon: Palette,
+      title: "Дизайнер",
+      description: "Создание прототипов и пользовательских интерфейсов",
+      capabilities: [
+        "Мокапы и wireframe",
+        "Прототипирование",
+        "UX/UI дизайн",
+        "Пользовательские сценарии"
+      ],
+      improvement: "55-65%"
+    },
+    {
+      id: "project-manager",
+      icon: Users,
+      title: "Проектный менеджер",
+      description: "Управление задачами и планирование спринтов",
+      capabilities: [
+        "Формирование бэклога спринта",
+        "Постановка задач",
+        "Приоритизация",
+        "Управление зависимостями"
+      ],
+      improvement: "45-55%"
     }
   ];
 
