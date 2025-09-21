@@ -36,7 +36,7 @@ const HeroSection = () => {
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
             <span className="text-gradient-animated font-bold">AI-ориентированный жизненный цикл разработки:</span><br />
-            автоматизация, метрики, предсказуемая поставка
+            <span className="font-bold">автоматизация, метрики, предсказуемая поставка</span>
           </p>
 
           {/* Metrics Cards */}
