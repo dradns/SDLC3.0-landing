@@ -39,7 +39,7 @@ const HeroSection = () => {
           </p>
 
           {/* Metrics Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-full mx-auto px-4">
             <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
               <div className="text-3xl font-bold text-primary mb-2">50-70%</div>
               <div className="text-sm text-muted-foreground">Сокращение Lead Time</div>
