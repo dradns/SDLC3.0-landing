@@ -15,7 +15,7 @@ const TrainingSection = () => {
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Обучение аналитиков <span className="text-primary">созданию AI-агентов</span>
             </h2>
-            <div className="text-lg font-semibold text-primary mb-4 group-hover:underline">
+            <div className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium text-lg">
               Курс «Системный Аналитик 3.0» →
             </div>
           </a>
