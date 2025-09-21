@@ -6,11 +6,21 @@ const TrainingSection = () => {
     <section className="py-16 px-4 bg-gradient-to-b from-background to-secondary/10">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-6">
-            Обучение аналитиков в SDLC 3.0
-          </h2>
+          <a 
+            href="https://analyst.aiidebas.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block group"
+          >
+            <h2 className="text-4xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors duration-300 cursor-pointer">
+              Обучение аналитиков в SDLC 3.0
+            </h2>
+            <div className="text-lg font-semibold text-primary mb-4 group-hover:underline">
+              Курс «Системный Аналитик 3.0» →
+            </div>
+          </a>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Курс «Системный Аналитик 3.0» готовит специалистов для работы в новой парадигме разработки с AI
+            Готовит специалистов для работы в новой парадигме разработки с AI
           </p>
         </div>
 
