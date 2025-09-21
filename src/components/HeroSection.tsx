@@ -35,7 +35,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
-            AI-ориентированный жизненный цикл разработки:<br />
+            <span className="text-gradient-animated">AI-ориентированный жизненный цикл разработки:</span><br />
             автоматизация, метрики, предсказуемая поставка
           </p>
 
