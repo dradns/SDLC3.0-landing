@@ -102,7 +102,7 @@ const AnalyticsAISection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium text-lg"
             >
-              AI-расширение для аналитиков и архитекторов решений AI IDE BAS
+              AI-расширение для аналитиков и архитекторов решений AI IDE BAS →
             </a>
           </div>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
