@@ -95,16 +95,17 @@ const AnalyticsAISection = () => {
           <h2 className="text-4xl font-bold text-foreground mb-6">
             Внедрение AI инструментов <span className="text-primary">в бизнес- и системный анализ</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            AI-расширение для аналитиков и архитекторов решений{" "}
+          <div className="mb-4">
             <a 
               href="https://aiidebas.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center px-3 py-1 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium"
+              className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium text-lg"
             >
-              AI IDE BAS
-            </a>{" "}
+              AI-расширение для аналитиков и архитекторов решений AI IDE BAS
+            </a>
+          </div>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             интегрируется прямо в рабочий процесс SDLC 3.0, превращая каждого аналитика 
             в высокопроизводительного специалиста с поддержкой искусственного интеллекта.
           </p>
