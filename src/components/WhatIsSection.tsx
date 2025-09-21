@@ -5,7 +5,7 @@ const WhatIsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Определение <span className="text-gradient">SDLC 3.0</span>
+            Определение <span className="text-gradient-animated">SDLC 3.0</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">SDLC 3.0 — модель жизненного цикла разработки ПО, где на каждом этапе применяются автоматизация, метрики и AI-инструменты для сокращения ручных операций и ускорения поставки изменений.
         </p>
