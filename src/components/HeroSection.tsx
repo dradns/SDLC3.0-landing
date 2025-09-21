@@ -50,7 +50,7 @@ const HeroSection = () => {
             </div>
             <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
               <div className="text-3xl font-bold text-primary mb-2">&lt;15%</div>
-              <div className="text-sm text-muted-foreground">Change Failure Rate</div>
+              <div className="text-sm text-muted-foreground">Доля неудачных релизов</div>
             </div>
             <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
               <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
