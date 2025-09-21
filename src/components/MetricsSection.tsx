@@ -89,30 +89,30 @@ const MetricsSection = () => {
         </div>
 
         {/* Real examples */}
-        <Card className="p-4 sm:p-8 bg-gradient-card border-card-border shadow-custom-lg">
-          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Примеры измеренных результатов</h3>
+        <Card className="p-8 bg-gradient-card border-card-border shadow-custom-lg">
+          <h3 className="text-2xl font-bold mb-8 text-center">Примеры измеренных результатов</h3>
           
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {examples.map((example, index) => (
-              <div key={index} className="bg-background/50 rounded-lg p-4 sm:p-6 border border-card-border">
-                <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base text-foreground">{example.metric}</h4>
+              <div key={index} className="bg-background/50 rounded-lg p-6 border border-card-border">
+                <h4 className="font-semibold mb-4 text-foreground">{example.metric}</h4>
                 
                 <div className="flex items-center justify-between">
-                  <div className="text-center flex-1">
-                    <div className="text-xs sm:text-sm text-muted-foreground mb-1">Было</div>
-                    <div className="text-sm sm:text-lg font-semibold text-destructive">{example.before}</div>
+                  <div className="text-center">
+                    <div className="text-sm text-muted-foreground mb-1">Было</div>
+                    <div className="text-lg font-semibold text-destructive">{example.before}</div>
                   </div>
                   
-                  <div className="flex-1 mx-2 sm:mx-4 relative">
+                  <div className="flex-1 mx-4 relative">
                     <div className="h-px bg-gradient-to-r from-destructive via-muted to-success"></div>
                     <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                      <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-success" />
+                      <TrendingUp className="w-4 h-4 text-success" />
                     </div>
                   </div>
                   
-                  <div className="text-center flex-1">
-                    <div className="text-xs sm:text-sm text-muted-foreground mb-1">Стало</div>
-                    <div className="text-sm sm:text-lg font-semibold text-success">{example.after}</div>
+                  <div className="text-center">
+                    <div className="text-sm text-muted-foreground mb-1">Стало</div>
+                    <div className="text-lg font-semibold text-success">{example.after}</div>
                   </div>
                 </div>
                 

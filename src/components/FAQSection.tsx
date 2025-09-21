@@ -73,12 +73,12 @@ const FAQSection = () => {
             <Card key={index} className="bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full p-4 sm:p-6 text-left focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
+                className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
               >
-                  <div className="flex items-center justify-between">
-                  <div className="flex items-start gap-2 sm:gap-3 flex-1">
-                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <h3 className="font-semibold text-sm sm:text-base text-foreground pr-2 sm:pr-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-start gap-3 flex-1">
+                    <HelpCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground pr-4">
                       {faq.question}
                     </h3>
                   </div>
@@ -93,9 +93,9 @@ const FAQSection = () => {
               </button>
               
               {openItems.includes(index) && (
-                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
-                  <div className="pl-4 sm:pl-8 border-l-2 border-primary/20">
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <div className="px-6 pb-6">
+                  <div className="pl-8 border-l-2 border-primary/20">
+                    <p className="text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -106,12 +106,12 @@ const FAQSection = () => {
         </div>
 
         {/* Contact info */}
-        <Card className="mt-12 p-4 sm:p-8 bg-primary/5 border-primary/20 shadow-custom-lg text-center">
+        <Card className="mt-12 p-8 bg-primary/5 border-primary/20 shadow-custom-lg text-center">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-primary">
+            <h3 className="text-xl font-semibold mb-3 text-primary">
               Не нашли ответ на свой вопрос?
             </h3>
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               SDLC 3.0 — это комплексный подход, который требует индивидуальной настройки под каждую команду. 
               Эффект от внедрения появляется не сразу, но результаты стоят усилий: команды работают эффективнее, 
               продукты выходят быстрее, а разработчики фокусируются на креативных задачах вместо рутины.
