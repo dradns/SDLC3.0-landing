@@ -1,5 +1,4 @@
 import { Zap } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
@@ -7,7 +6,7 @@ const HeroSection = () => {
       {/* AI Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ backgroundImage: `url(/fon.jpg)` }}
       />
       
       {/* Gradient overlay for lightening effect */}
