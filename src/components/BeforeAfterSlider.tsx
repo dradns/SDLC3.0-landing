@@ -100,21 +100,21 @@ const BeforeAfterSlider = () => {
             const isReverse = metric.title === "Lead Time" || metric.title === "MTTR";
             
             return (
-              <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300">
-                <div className="text-center">
+              <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[280px] flex flex-col">
+                <div className="text-center flex-1 flex flex-col">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <metric.icon className="w-6 h-6 text-primary" />
                   </div>
                   
                   <h3 className="font-semibold mb-2">{metric.title}</h3>
-                  <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-xs text-muted-foreground mb-4 leading-relaxed h-8 flex items-start justify-center">
                     {metric.description}
                   </p>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-3 flex-1 flex flex-col justify-between">
                     {/* Current value */}
                     <div className="text-center">
-                      <div className={`text-2xl font-bold ${getProgressColor(progress)}`}>
+                      <div className={`text-2xl font-bold leading-none ${getProgressColor(progress)}`}>
                         {typeof currentValue === 'number' ? currentValue.toFixed(1) : currentValue}
                       </div>
                       <div className="text-sm text-muted-foreground">{metric.unit}</div>
