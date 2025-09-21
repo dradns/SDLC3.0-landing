@@ -40,7 +40,7 @@ const AnalyticsAISection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            Внедрение AI инструментов в бизнес- и системный анализ
+            Внедрение AI инструментов <span className="text-primary">в бизнес- и системный анализ</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             В SDLC 3.0 аналитическая работа становится частью единого управляемого цикла.
