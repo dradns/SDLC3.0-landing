@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group relative">
+            <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group relative h-full flex flex-col">
               {/* Quote icon */}
               <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Quote className="w-8 h-8 text-primary" />
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Text */}
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                 "{testimonial.text}"
               </p>
 
