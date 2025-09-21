@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-card-border rounded-full px-4 py-2 mb-8 shadow-custom-md">
+          <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-2 mb-8 shadow-custom-md">
             <Zap className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
               Революция в разработке ПО
