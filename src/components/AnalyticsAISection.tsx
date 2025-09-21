@@ -273,7 +273,15 @@ const AnalyticsAISection = () => {
 
         <div className="text-center mt-8">
           <p className="text-sm text-muted-foreground">
-            AI IDE BAS доступен для VS Code, Cursor и Windsurf IDE
+            <a 
+              href="https://aiidebas.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary font-bold hover:underline"
+            >
+              AI IDE BAS
+            </a>{" "}
+            доступен для VS Code, Cursor и Windsurf IDE
           </p>
         </div>
       </div>
