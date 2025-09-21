@@ -5,23 +5,23 @@ const ProblemsSection = () => {
   const problems = [
     {
       icon: Clock,
-      title: "Слишком много ручных шагов",
-      description: "Релизы затягиваются из-за рутинных операций и ручных проверок"
+      title: "Длительное время релиза",
+      description: "Время от коммита до релиза занимает недели вместо дней из-за ручных процессов"
     },
     {
       icon: AlertTriangle,
-      title: "Непрозрачные сроки",
-      description: "Сложно предсказать, когда фича будет готова к выходу в продакшн"
+      title: "Высокая доля ручных шагов",
+      description: "Ревью, тесты и согласования выполняются вручную, что замедляет процесс"
     },
     {
       icon: Users,
-      title: "Долгое освоение проекта",
-      description: "Новички тратят много времени на понимание архитектуры и процессов"
+      title: "Неравномерные релизы",
+      description: "Сбои пайплайнов и неравномерность релизов нарушают планы разработки"
     },
     {
       icon: Bug,
-      title: "Поздние баги",
-      description: "Критические ошибки находят уже после релиза в продакшн"
+      title: "Отсутствие прозрачности",
+      description: "Нет четкого понимания прогресса разработки и статуса задач"
     }
   ];
 
@@ -30,10 +30,10 @@ const ProblemsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Почему это <span className="text-gradient">важно</span>
+            Наблюдаемые <span className="text-gradient">проблемы</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Частые проблемы команд разработки, которые замедляют выпуск качественных продуктов
+            Текущие вызовы в процессе разработки ПО, которые замедляют доставку и снижают качество продукта
           </p>
         </div>
 

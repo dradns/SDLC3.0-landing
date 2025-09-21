@@ -25,7 +25,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-card-border rounded-full px-4 py-2 mb-8 shadow-custom-md">
             <Zap className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              Революция в разработке ПО
+              Автоматизация на каждом этапе
             </span>
           </div>
 
@@ -35,26 +35,26 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
-            Новый подход к разработке, где AI помогает команде на всех этапах: от постановки задачи до релиза и поддержки продукта
+            Модель жизненного цикла разработки ПО, где на каждом этапе применяются автоматизация, метрики и AI-инструменты для сокращения ручных операций и ускорения поставки изменений
           </p>
 
           {/* Metrics Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">30-50%</div>
-              <div className="text-sm text-muted-foreground">Ускорение разработки</div>
+              <div className="text-3xl font-bold text-primary mb-2">50-70%</div>
+              <div className="text-sm text-muted-foreground">Сокращение Lead Time</div>
             </div>
             <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">80%</div>
-              <div className="text-sm text-muted-foreground">Покрытие тестами</div>
+              <div className="text-3xl font-bold text-primary mb-2">2-5x</div>
+              <div className="text-sm text-muted-foreground">Рост частоты деплоев</div>
+            </div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
+              <div className="text-3xl font-bold text-primary mb-2">&lt;15%</div>
+              <div className="text-sm text-muted-foreground">Change Failure Rate</div>
             </div>
             <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
               <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
-              <div className="text-sm text-muted-foreground">Снижение MTTR</div>
-            </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">10→3</div>
-              <div className="text-sm text-muted-foreground">Дни до релиза</div>
+              <div className="text-sm text-muted-foreground">Сокращение MTTR</div>
             </div>
           </div>
         </div>

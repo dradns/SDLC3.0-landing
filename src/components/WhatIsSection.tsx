@@ -5,9 +5,9 @@ const WhatIsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Что такое <span className="text-gradient">SDLC 3.0</span>
+            Определение <span className="text-gradient">SDLC 3.0</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">SDLC 3.0 — операционная модель разработки с интегрированным AI, который встроен в каждый этап жизненного цикла — от анализа требований до поддержки.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">SDLC 3.0 — модель жизненного цикла разработки ПО, где на каждом этапе применяются автоматизация, метрики и AI-инструменты для сокращения ручных операций и ускорения поставки изменений.
         </p>
         </div>
 
@@ -17,9 +17,9 @@ const WhatIsSection = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Brain className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">AI-помощник</h3>
+              <h3 className="text-xl font-semibold mb-3">Автоматизация</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Искусственный интеллект анализирует код, предлагает решения и автоматизирует рутинные задачи
+                Автоматическая генерация шаблонного кода, миграций, тестов и AI-анализ PR с поиском дефектов и уязвимостей
               </p>
             </div>
           </Card>
@@ -29,9 +29,9 @@ const WhatIsSection = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Workflow className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Умные процессы</h3>
+              <h3 className="text-xl font-semibold mb-3">Метрики качества</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Каждый этап разработки оптимизирован с помощью AI для максимальной эффективности команды
+                Настроенные DORA-метрики для измерения качества и скорости, A/B-эксперименты на реальных задачах
               </p>
             </div>
           </Card>
@@ -41,9 +41,9 @@ const WhatIsSection = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Rocket className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Быстрые релизы</h3>
+              <h3 className="text-xl font-semibold mb-3">AI-инструменты</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Цель — меньше рутины и быстрее выпускать качественные фичи в продакшн
+                AI-триаж инцидентов, автоматический root cause analysis, прогноз стабильности релиза
               </p>
             </div>
           </Card>

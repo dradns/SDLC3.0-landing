@@ -5,30 +5,30 @@ const MetricsSection = () => {
   const metrics = [
     {
       icon: Clock,
-      title: "Lead Time",
-      description: "Время от написания кода до релиза",
-      improvement: "3 раза быстрее",
+      title: "Lead Time for Changes",
+      description: "Время от коммита до продакшена",
+      improvement: "Сокращение 50-70%",
       color: "text-blue-600"
     },
     {
       icon: Zap,
-      title: "Частота релизов",
-      description: "Как часто обновляем продукт",
-      improvement: "Несколько раз в неделю",
+      title: "Deployment Frequency",
+      description: "Частота развертывания в продакшен",
+      improvement: "Рост в 2-5 раз",
       color: "text-green-600"
     },
     {
       icon: Shield,
-      title: "Стабильность релизов",
-      description: "Количество откатов и багов",
-      improvement: "На 70% меньше откатов",
+      title: "Change Failure Rate",
+      description: "Процент неуспешных изменений",
+      improvement: "Снижение до <15%",
       color: "text-purple-600"
     },
     {
       icon: TrendingUp,
-      title: "Время восстановления",
-      description: "Как быстро починили после сбоя",
-      improvement: "MTTR в 2-3 раза меньше",
+      title: "MTTR",
+      description: "Время восстановления после сбоя",
+      improvement: "Сокращение в 2-3 раза",
       color: "text-orange-600"
     }
   ];
@@ -42,21 +42,21 @@ const MetricsSection = () => {
     },
     {
       metric: "Покрытие тестами",
-      before: "45%",
+      before: "20%",
       after: "80%",
-      improvement: "+78%"
+      improvement: "+300%"
     },
     {
       metric: "MTTR (время восстановления)",
-      before: "4 часа",
-      after: "1.5 часа",
-      improvement: "-62%"
+      before: "12 ч",
+      after: "1-3 ч",
+      improvement: "-75%"
     },
     {
       metric: "Частота релизов",
       before: "1 раз в 2 недели",
-      after: "3-4 раза в неделю",
-      improvement: "6x"
+      after: "2-3 раза в неделю",
+      improvement: "400%"
     }
   ];
 
@@ -65,10 +65,10 @@ const MetricsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Как измеряется <span className="text-gradient">результат</span>
+            Измерение <span className="text-gradient">эффекта</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ключевые показатели, на которые мы смотрим для оценки эффективности SDLC 3.0
+            Данные собираются через A/B-эксперименты на реальных задачах, сравнение контрольных и экспериментальных групп
           </p>
         </div>
 
@@ -90,7 +90,7 @@ const MetricsSection = () => {
 
         {/* Real examples */}
         <Card className="p-8 bg-gradient-card border-card-border shadow-custom-lg">
-          <h3 className="text-2xl font-bold mb-8 text-center">Реальные примеры улучшений</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center">Примеры измеренных результатов</h3>
           
           <div className="grid md:grid-cols-2 gap-6">
             {examples.map((example, index) => (

@@ -5,38 +5,38 @@ const HowItWorksSection = () => {
   const steps = [
     {
       icon: FileText,
-      title: "Постановка задачи",
-      description: "Формулирует user stories, находит пробелы в требованиях",
+      title: "Планирование",
+      description: "Формализованные DoR, единая постановка задач, генерация user stories с AI",
       color: "text-blue-600"
-    },
-    {
-      icon: Layers,
-      title: "Проектирование",
-      description: "Предлагает архитектурные варианты, предупреждает об ошибках",
-      color: "text-green-600"
     },
     {
       icon: Code,
       title: "Разработка",
-      description: "Генерирует шаблонный код, миграции и автотесты",
-      color: "text-purple-600"
+      description: "Автоматическая генерация шаблонного кода, миграций, тестов",
+      color: "text-green-600"
     },
     {
       icon: Eye,
       title: "Code Review",
-      description: "Проверяет PR, находит баги, предлагает исправления",
-      color: "text-orange-600"
+      description: "AI-анализ PR, поиск дефектов и уязвимостей до merge",
+      color: "text-purple-600"
     },
     {
       icon: TestTube,
       title: "Тестирование",
-      description: "Запускает только нужные тесты, прогнозирует риск релиза",
+      description: "Оптимизация набора тестов, прогноз стабильности релиза",
+      color: "text-orange-600"
+    },
+    {
+      icon: Layers,
+      title: "Деплой",
+      description: "Полностью автоматизированный CI/CD, унифицированные пайплайны",
       color: "text-red-600"
     },
     {
       icon: Headphones,
       title: "Поддержка",
-      description: "Классифицирует баги, ищет корневую причину проблем",
+      description: "AI-триаж инцидентов, автоматический root cause analysis",
       color: "text-cyan-600"
     }
   ];
@@ -46,10 +46,10 @@ const HowItWorksSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Как это <span className="text-gradient">работает</span>
+            Основные изменения в <span className="text-gradient">SDLC 3.0</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            AI помогает на каждом шаге разработки, оптимизируя процессы и повышая качество
+            Каждый этап жизненного цикла разработки трансформируется с помощью автоматизации и AI-инструментов для повышения эффективности
           </p>
         </div>
 

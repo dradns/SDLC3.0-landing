@@ -4,21 +4,21 @@ import { Database, GitBranch, TestTube, FileText, CheckCircle } from "lucide-rea
 const RequirementsSection = () => {
   const requirements = [
     {
-      icon: FileText,
-      title: "Архитектурные решения и гайды",
-      description: "Храните документацию, архитектурные решения и стандарты команды в одном месте",
+      icon: GitBranch,
+      title: "Стандартизированные пайплайны CI/CD",
+      description: "Унифицированные процессы автоматической сборки, тестирования и развертывания",
       status: "critical"
     },
     {
-      icon: GitBranch,
-      title: "CI/CD пайплайны",
-      description: "Настройте автоматизированные процессы сборки, тестирования и деплоя",
-      status: "important"
+      icon: FileText,
+      title: "Единый репозиторий документации",
+      description: "ADR, style guides, спецификации в едином месте для эффективной работы AI",
+      status: "critical"
     },
     {
       icon: TestTube,
-      title: "Тесты и документация",
-      description: "Поддерживайте актуальные тесты и техническую документацию проекта",
+      title: "Автоматизированные тесты",
+      description: "Unit, integration и e2e тесты для обеспечения качества и надежности процессов",
       status: "important"
     }
   ];
@@ -28,10 +28,10 @@ const RequirementsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Что нужно для работы <span className="text-gradient">SDLC 3.0</span>
+            Требования к <span className="text-gradient">внедрению</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Чтобы AI помогал максимально эффективно, важно подготовить правильную основу
+            Базовые требования для успешного внедрения SDLC 3.0 и достижения максимальной эффективности AI-инструментов
           </p>
         </div>
 
@@ -68,10 +68,10 @@ const RequirementsSection = () => {
               <CheckCircle className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-primary">Ключевой принцип</h3>
+              <h3 className="text-xl font-semibold mb-3 text-primary">Ограничения и риски</h3>
               <p className="text-lg text-foreground leading-relaxed">
-                <strong>Чем понятнее процессы, тем полезнее AI.</strong> Искусственный интеллект работает лучше всего, 
-                когда у него есть четкий контекст: архитектурные решения, стандарты кода, тесты и документация.
+                <strong>При отсутствии документации эффект AI снижается.</strong> Первые недели внедрения возможно падение скорости из-за настройки процессов. 
+                Эффективность выше в проектах с унифицированными пайплайнами и структурированными данными.
               </p>
             </div>
           </div>
