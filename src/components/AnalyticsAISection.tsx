@@ -96,7 +96,16 @@ const AnalyticsAISection = () => {
             Внедрение AI инструментов <span className="text-primary">в бизнес- и системный анализ</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            AI IDE BAS интегрируется прямо в рабочий процесс SDLC 3.0, превращая каждого аналитика 
+            AI-расширение для аналитиков и архитекторов решений{" "}
+            <a 
+              href="https://aiidebas.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-3 py-1 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium"
+            >
+              AI IDE BAS
+            </a>{" "}
+            интегрируется прямо в рабочий процесс SDLC 3.0, превращая каждого аналитика 
             в высокопроизводительного специалиста с поддержкой искусственного интеллекта.
           </p>
         </div>
