@@ -104,8 +104,8 @@ const TestimonialsSection = () => {
               </p>
 
               {/* Metrics */}
-              <div className="border-t border-card-border pt-3">
-                <div className="bg-success/10 text-success text-xs font-medium px-3 py-1 rounded-full inline-block">
+              <div className="border-t border-card-border pt-3 flex items-center">
+                <div className="bg-success/10 text-success text-xs font-medium px-3 py-1 rounded-full">
                   {testimonial.metrics}
                 </div>
               </div>
