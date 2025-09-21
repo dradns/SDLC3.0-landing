@@ -13,7 +13,7 @@ const TrainingSection = () => {
             className="inline-block group"
           >
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Обучение аналитиков в SDLC 3.0
+              Обучение аналитиков <span className="text-primary">созданию AI-агентов</span>
             </h2>
             <div className="text-lg font-semibold text-primary mb-4 group-hover:underline">
               Курс «Системный Аналитик 3.0» →
