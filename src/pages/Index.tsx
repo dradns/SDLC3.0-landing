@@ -7,6 +7,8 @@ import MetricsSection from "@/components/MetricsSection";
 import SDLCDiagram from "@/components/SDLCDiagram";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import AIApplicationsSection from "@/components/AIApplicationsSection";
+import AnalyticsAISection from "@/components/AnalyticsAISection";
+import TrainingSection from "@/components/TrainingSection";
 import CasesSection from "@/components/CasesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
@@ -23,6 +25,8 @@ const Index = () => {
       <BeforeAfterSlider />
       <MetricsSection />
       <AIApplicationsSection />
+      <AnalyticsAISection />
+      <TrainingSection />
       <CasesSection />
       <TestimonialsSection />
       <FAQSection />
