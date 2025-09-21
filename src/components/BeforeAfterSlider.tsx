@@ -2,63 +2,51 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { TrendingUp, TrendingDown, Clock, Shield } from "lucide-react";
-
 const BeforeAfterSlider = () => {
   const [sliderValue, setSliderValue] = useState([50]);
-  
-  const metrics = [
-    {
-      title: "Lead Time",
-      icon: Clock,
-      unit: "дней",
-      before: 10,
-      after: 3,
-      description: "Время от написания кода до продакшена"
-    },
-    {
-      title: "Частота релизов",
-      icon: TrendingUp,
-      unit: "в неделю",
-      before: 0.5,
-      after: 3.5,
-      description: "Количество релизов в неделю"
-    },
-    {
-      title: "Стабильность",
-      icon: Shield,
-      unit: "% успешных релизов",
-      before: 75,
-      after: 95,
-      description: "Процент релизов без откатов"
-    },
-    {
-      title: "MTTR",
-      icon: TrendingDown,
-      unit: "часов",
-      before: 4,
-      after: 1.5,
-      description: "Время восстановления после сбоя"
-    }
-  ];
-
+  const metrics = [{
+    title: "Lead Time",
+    icon: Clock,
+    unit: "дней",
+    before: 10,
+    after: 3,
+    description: "Время от написания кода до продакшена"
+  }, {
+    title: "Частота релизов",
+    icon: TrendingUp,
+    unit: "в неделю",
+    before: 0.5,
+    after: 3.5,
+    description: "Количество релизов в неделю"
+  }, {
+    title: "Стабильность",
+    icon: Shield,
+    unit: "% успешных релизов",
+    before: 75,
+    after: 95,
+    description: "Процент релизов без откатов"
+  }, {
+    title: "MTTR",
+    icon: TrendingDown,
+    unit: "часов",
+    before: 4,
+    after: 1.5,
+    description: "Время восстановления после сбоя"
+  }];
   const getInterpolatedValue = (before: number, after: number, progress: number) => {
     return before + (after - before) * (progress / 100);
   };
-
   const getProgressColor = (progress: number) => {
     if (progress < 30) return "text-destructive";
     if (progress < 70) return "text-warning";
     return "text-success";
   };
-
   const progress = sliderValue[0];
-
-  return (
-    <section className="py-20 px-4 bg-background">
+  return <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-gradient-animated">До и После</span> внедрения SDLC 3.0
+            <span className="text-gradient">До и после</span> внедрения SDLC 3.0
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Перемещайте слайдер, чтобы увидеть как изменяются ключевые метрики
@@ -72,13 +60,7 @@ const BeforeAfterSlider = () => {
             <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <span>Без AI</span>
               <div className="flex-1 max-w-md mx-4">
-                <Slider
-                  value={sliderValue}
-                  onValueChange={setSliderValue}
-                  max={100}
-                  step={1}
-                  className="w-full"
-                />
+                <Slider value={sliderValue} onValueChange={setSliderValue} max={100} step={1} className="w-full" />
               </div>
               <span>Полное внедрение</span>
             </div>
@@ -94,13 +76,11 @@ const BeforeAfterSlider = () => {
         {/* Metrics cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {metrics.map((metric, index) => {
-            const currentValue = getInterpolatedValue(metric.before, metric.after, progress);
-            const improvement = ((metric.after - metric.before) / metric.before * 100).toFixed(0);
-            const isImprovement = metric.after > metric.before;
-            const isReverse = metric.title === "Lead Time" || metric.title === "MTTR";
-            
-            return (
-              <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[280px] flex flex-col">
+          const currentValue = getInterpolatedValue(metric.before, metric.after, progress);
+          const improvement = ((metric.after - metric.before) / metric.before * 100).toFixed(0);
+          const isImprovement = metric.after > metric.before;
+          const isReverse = metric.title === "Lead Time" || metric.title === "MTTR";
+          return <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[280px] flex flex-col">
                 <div className="text-center flex-1 flex flex-col">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <metric.icon className="w-6 h-6 text-primary" />
@@ -123,13 +103,9 @@ const BeforeAfterSlider = () => {
                     {/* Progress bar */}
                     <div className="relative">
                       <div className="w-full bg-secondary rounded-full h-2">
-                        <div 
-                          className={`h-2 rounded-full transition-all duration-300 ${
-                            progress < 30 ? 'bg-destructive' :
-                            progress < 70 ? 'bg-warning' : 'bg-success'
-                          }`}
-                          style={{ width: `${progress}%` }}
-                        ></div>
+                        <div className={`h-2 rounded-full transition-all duration-300 ${progress < 30 ? 'bg-destructive' : progress < 70 ? 'bg-warning' : 'bg-success'}`} style={{
+                      width: `${progress}%`
+                    }}></div>
                       </div>
                     </div>
                     
@@ -140,18 +116,13 @@ const BeforeAfterSlider = () => {
                     </div>
                     
                     {/* Improvement indicator */}
-                    {progress > 10 && (
-                      <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
-                        isReverse ? 'bg-success/10 text-success' : 'bg-success/10 text-success'
-                      }`}>
+                    {progress > 10 && <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${isReverse ? 'bg-success/10 text-success' : 'bg-success/10 text-success'}`}>
                         {isReverse ? '-' : '+'}{improvement}%
-                      </div>
-                    )}
+                      </div>}
                   </div>
                 </div>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
 
         {/* Insights */}
@@ -170,8 +141,6 @@ const BeforeAfterSlider = () => {
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BeforeAfterSlider;
