@@ -12,7 +12,7 @@ const TrainingSection = () => {
             rel="noopener noreferrer"
             className="inline-block group"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors duration-300 cursor-pointer">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
               Обучение аналитиков в SDLC 3.0
             </h2>
             <div className="text-lg font-semibold text-primary mb-4 group-hover:underline">
