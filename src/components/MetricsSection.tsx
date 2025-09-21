@@ -65,7 +65,7 @@ const MetricsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Измерение <span className="text-gradient">эффекта</span>
+            Измерение <span className="text-gradient-animated">эффекта</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Данные собираются через A/B-эксперименты на реальных задачах, сравнение контрольных и экспериментальных групп

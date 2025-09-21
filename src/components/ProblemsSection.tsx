@@ -30,7 +30,7 @@ const ProblemsSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Наблюдаемые <span className="text-gradient">проблемы</span>
+            Наблюдаемые <span className="text-gradient-animated">проблемы</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Текущие вызовы в процессе разработки ПО, которые замедляют доставку и снижают качество продукта
