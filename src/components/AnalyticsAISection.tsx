@@ -1,37 +1,51 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, GitBranch, BookOpen, TrendingUp, MousePointer, BarChart3 } from "lucide-react";
+import { FileText, GitBranch, BookOpen, TrendingUp, Settings, BarChart3, Zap } from "lucide-react";
 import { useState } from "react";
 
 const AnalyticsAISection = () => {
-  const [hoveredArtifact, setHoveredArtifact] = useState<string | null>(null);
+  const [hoveredMode, setHoveredMode] = useState<string | null>(null);
 
-  const artifacts = [
+  const analystModes = [
     {
-      id: "user-story",
+      id: "business-analyst",
       icon: FileText,
-      title: "User Story и Use Case",
-      description: "Автоматическая генерация черновиков, проверка критериев приёмки",
-      timeBefore: "4-6 часов",
-      timeAfter: "1-2 часа",
-      improvement: "60%"
+      title: "Бизнес-аналитик",
+      description: "Автоматизация создания пользовательских историй и требований",
+      capabilities: [
+        "User Story и Use Case",
+        "Диаграммы активности PlantUML", 
+        "Критерии приёмки",
+        "Глоссарий проекта",
+        "Анализ заинтересованных сторон"
+      ],
+      improvement: "60-70%"
     },
     {
-      id: "diagrams",
+      id: "system-analyst", 
       icon: GitBranch,
-      title: "Диаграммы и схемы",
-      description: "Быстрая генерация PlantUML или BPMN диаграмм",
-      timeBefore: "3-4 часа",
-      timeAfter: "30-45 мин",
-      improvement: "75%"
+      title: "Системный аналитик",
+      description: "Проектирование архитектуры и API спецификаций",
+      capabilities: [
+        "Backend логика",
+        "ER-диаграммы",
+        "Sequence диаграммы", 
+        "OpenAPI/AsyncAPI спецификации",
+        "Нефункциональные требования"
+      ],
+      improvement: "65-75%"
     },
     {
-      id: "glossary",
+      id: "architect",
       icon: BookOpen,
-      title: "Глоссарии и требования",
-      description: "Унификация терминов и проверка согласованности",
-      timeBefore: "2-3 часа",
-      timeAfter: "45-60 мин",
-      improvement: "70%"
+      title: "Архитектор решений",
+      description: "Создание высокоуровневой архитектуры системы",
+      capabilities: [
+        "Диаграммы контекста",
+        "Архитектурные решения",
+        "Компонентные диаграммы",
+        "Интеграционные схемы"
+      ],
+      improvement: "70-80%"
     }
   ];
 
@@ -43,27 +57,27 @@ const AnalyticsAISection = () => {
             Внедрение AI инструментов <span className="text-primary">в бизнес- и системный анализ</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            В SDLC 3.0 аналитическая работа становится частью единого управляемого цикла.
-            AI IDE BAS помогает аналитикам и архитекторам автоматизировать ключевые артефакты:
+            AI IDE BAS интегрируется прямо в рабочий процесс SDLC 3.0, превращая каждого аналитика 
+            в высокопроизводительного специалиста с поддержкой искусственного интеллекта.
           </p>
         </div>
 
-        {/* Карта артефактов аналитика */}
+        {/* Режимы аналитика */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {artifacts.map((artifact) => {
-            const IconComponent = artifact.icon;
-            const isHovered = hoveredArtifact === artifact.id;
+          {analystModes.map((mode) => {
+            const IconComponent = mode.icon;
+            const isHovered = hoveredMode === mode.id;
             
             return (
               <Card 
-                key={artifact.id}
+                key={mode.id}
                 className={`cursor-pointer transition-all duration-300 group ${
                   isHovered 
                     ? 'border-primary shadow-lg scale-105 bg-primary/5' 
                     : 'border-card-border hover:border-primary/50'
                 }`}
-                onMouseEnter={() => setHoveredArtifact(artifact.id)}
-                onMouseLeave={() => setHoveredArtifact(null)}
+                onMouseEnter={() => setHoveredMode(mode.id)}
+                onMouseLeave={() => setHoveredMode(null)}
               >
                 <CardHeader className="text-center">
                   <div className={`mx-auto p-3 rounded-lg transition-all duration-300 ${
@@ -71,26 +85,26 @@ const AnalyticsAISection = () => {
                   }`}>
                     <IconComponent className="w-8 h-8" />
                   </div>
-                  <CardTitle className="text-xl">{artifact.title}</CardTitle>
+                  <CardTitle className="text-xl">{mode.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-muted-foreground mb-4">{artifact.description}</p>
+                  <p className="text-muted-foreground mb-4">{mode.description}</p>
                   
-                  {/* Показываем метрики при наведении */}
+                  {/* Показываем возможности при наведении */}
                   {isHovered && (
                     <div className="bg-background/80 backdrop-blur-sm rounded-lg p-4 border animate-in fade-in-0 slide-in-from-bottom-2">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-muted-foreground">Раньше:</span>
-                        <span className="text-sm font-medium text-destructive">{artifact.timeBefore}</span>
-                      </div>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-muted-foreground">С AI:</span>
-                        <span className="text-sm font-medium text-green-600">{artifact.timeAfter}</span>
+                      <div className="space-y-2 mb-4">
+                        {mode.capabilities.map((capability, index) => (
+                          <div key={index} className="flex items-center gap-2 text-sm">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            <span>{capability}</span>
+                          </div>
+                        ))}
                       </div>
                       <div className="flex items-center justify-center gap-2 pt-2 border-t">
-                        <TrendingUp className="w-4 h-4 text-green-600" />
+                        <Zap className="w-4 h-4 text-green-600" />
                         <span className="text-sm font-bold text-green-600">
-                          Ускорение на {artifact.improvement}
+                          Ускорение на {mode.improvement}
                         </span>
                       </div>
                     </div>
@@ -101,40 +115,116 @@ const AnalyticsAISection = () => {
           })}
         </div>
 
-        {/* Сравнение времени до/после */}
+        {/* Ключевые преимущества AI IDE BAS в SDLC 3.0 */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <Card className="border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl flex items-center gap-2">
+                <Settings className="w-5 h-5 text-primary" />
+                Интеграция в VS Code/Cursor/Windsurf
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-4">
+                AI IDE BAS работает как расширение в привычных IDE, обеспечивая 
+                бесшовную интеграцию в существующий рабочий процесс команды.
+              </p>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Единая среда разработки для всех ролей</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Автоматическая синхронизация артефактов</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Контроль версий для всех документов</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-primary/20">
+            <CardHeader>
+              <CardTitle className="text-xl flex items-center gap-2">
+                <BarChart3 className="w-5 h-5 text-primary" />
+                Метрики и качество
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-4">
+                AI анализирует каждый артефакт на соответствие стандартам, 
+                обеспечивая единое качество документации по всему проекту.
+              </p>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Автоматическая проверка критериев приёмки</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Валидация диаграмм и схем</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Мониторинг покрытия требований</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Влияние на SDLC 3.0 */}
         <Card className="bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl flex items-center justify-center gap-2">
-              <BarChart3 className="w-6 h-6 text-primary" />
-              Эффект внедрения AI IDE BAS
+              <TrendingUp className="w-6 h-6 text-primary" />
+              Эффект на весь жизненный цикл SDLC 3.0
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="grid md:grid-cols-3 gap-8 text-center mb-6">
               <div className="space-y-2">
-                <div className="text-3xl font-bold text-destructive">8-13 часов</div>
-                <div className="text-sm text-muted-foreground">Время на аналитику без AI</div>
+                <div className="text-3xl font-bold text-destructive">3-5 недель</div>
+                <div className="text-sm text-muted-foreground">Фаза анализа без AI</div>
               </div>
               <div className="flex items-center justify-center">
                 <div className="w-16 h-1 bg-gradient-to-r from-destructive to-green-600 rounded-full"></div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl font-bold text-green-600">3-4 часа</div>
-                <div className="text-sm text-muted-foreground">Время с AI IDE BAS</div>
+                <div className="text-3xl font-bold text-green-600">1-2 недели</div>
+                <div className="text-sm text-muted-foreground">Фаза анализа с AI IDE BAS</div>
               </div>
             </div>
-            <div className="text-center mt-6 p-4 bg-background/50 rounded-lg">
+            
+            <div className="grid md:grid-cols-2 gap-6 text-center">
+              <div className="p-4 bg-background/50 rounded-lg">
+                <div className="text-2xl font-bold text-primary mb-2">70%</div>
+                <p className="text-sm text-muted-foreground">
+                  Сокращение времени на создание технической документации
+                </p>
+              </div>
+              <div className="p-4 bg-background/50 rounded-lg">
+                <div className="text-2xl font-bold text-primary mb-2">85%</div>
+                <p className="text-sm text-muted-foreground">
+                  Снижение ошибок в требованиях на входе в разработку
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-6 p-4 bg-background/80 rounded-lg border">
               <p className="text-lg font-semibold text-primary">
-                Результат: меньше ошибок в документации, ускоренное согласование требований, единый формат артефактов
+                Результат: качественная аналитика становится катализатором для всего SDLC 3.0 процесса
               </p>
             </div>
           </CardContent>
         </Card>
 
         <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-            <MousePointer className="w-4 h-4" />
-            Наведите курсор на карточки выше для просмотра детальных метрик
+          <p className="text-sm text-muted-foreground">
+            AI IDE BAS доступен для VS Code, Cursor и Windsurf IDE
           </p>
         </div>
       </div>
