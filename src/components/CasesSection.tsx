@@ -85,9 +85,9 @@ const CasesSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {cases.map((caseStudy, index) => (
-            <Card key={index} className="p-8 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group">
+            <Card key={index} className="p-4 sm:p-6 lg:p-8 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group">
               <div className="mb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -126,10 +126,10 @@ const CasesSection = () => {
 
                 {/* Key metrics */}
                 <div className="border-t border-card-border pt-4">
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4">
                     {Object.entries(caseStudy.metrics).map(([key, value], idx) => (
-                      <div key={idx} className="text-center">
-                        <div className={`text-lg font-bold ${
+                      <div key={idx} className="text-center p-2 sm:p-0">
+                        <div className={`text-base sm:text-lg font-bold ${
                           value.startsWith('+') ? 'text-success' : 'text-primary'
                         }`}>
                           {value}

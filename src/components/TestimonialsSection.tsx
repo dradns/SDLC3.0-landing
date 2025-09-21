@@ -71,9 +71,9 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group relative h-full flex flex-col">
+            <Card key={index} className="p-4 sm:p-6 bg-gradient-card border-card-border shadow-custom-md hover:shadow-custom-lg transition-all duration-300 group relative h-full flex flex-col">
               {/* Quote icon */}
               <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Quote className="w-8 h-8 text-primary" />
@@ -114,9 +114,9 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Bottom stat */}
-        <div className="mt-16 text-center">
-          <Card className="inline-block p-6 bg-primary/5 border-primary/20 shadow-custom-lg">
-            <div className="flex items-center gap-6">
+        <div className="mt-12 sm:mt-16 text-center">
+          <Card className="inline-block p-4 sm:p-6 bg-primary/5 border-primary/20 shadow-custom-lg">
+            <div className="flex items-center gap-4 sm:gap-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">94%</div>
                 <div className="text-xs text-muted-foreground">рекомендуют</div>

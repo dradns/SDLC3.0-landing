@@ -64,7 +64,7 @@ const SDLCDiagram = () => {
 
         <div className="relative">
           {/* Main diagram */}
-          <div className="relative h-[500px] bg-gradient-card rounded-2xl border border-card-border shadow-custom-lg overflow-hidden">
+          <div className="relative h-[400px] sm:h-[500px] bg-gradient-card rounded-2xl border border-card-border shadow-custom-lg overflow-hidden">
             {/* Connection lines - circular flow */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none">
               {steps.map((step, index) => {
@@ -87,8 +87,8 @@ const SDLCDiagram = () => {
               left: `${position.x}%`,
               top: `${position.y}%`
             }} onMouseEnter={() => setActiveStep(step.id)}>
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${activeStep === step.id ? 'bg-primary border-primary shadow-custom-lg shadow-primary/25' : 'bg-card border-primary/30 shadow-custom-md hover:border-primary/50 hover:shadow-custom-lg'}`}>
-                    <step.icon className={`w-7 h-7 transition-colors duration-300 ${activeStep === step.id ? 'text-primary-foreground' : 'text-primary'}`} />
+                  <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${activeStep === step.id ? 'bg-primary border-primary shadow-custom-lg shadow-primary/25' : 'bg-card border-primary/30 shadow-custom-md hover:border-primary/50 hover:shadow-custom-lg'}`}>
+                    <step.icon className={`w-5 h-5 sm:w-7 sm:h-7 transition-colors duration-300 ${activeStep === step.id ? 'text-primary-foreground' : 'text-primary'}`} />
                   </div>
                   
                   {/* Step label */}
@@ -99,7 +99,7 @@ const SDLCDiagram = () => {
                 marginBottom: position.y >= 50 ? '8px' : 'auto',
                 minWidth: 'max-content'
               }}>
-                     <div className={`text-sm font-medium transition-colors duration-300 px-2 py-1 rounded-md ${activeStep === step.id ? 'text-primary bg-card border border-primary/20' : 'text-foreground bg-card border border-border'}`}>
+                     <div className={`text-xs sm:text-sm font-medium transition-colors duration-300 px-2 py-1 rounded-md ${activeStep === step.id ? 'text-primary bg-card border border-primary/20' : 'text-foreground bg-card border border-border'}`}>
                       {step.title}
                     </div>
                   </div>
@@ -108,9 +108,9 @@ const SDLCDiagram = () => {
 
             {/* AI Brain in center */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-custom-xl relative overflow-hidden">
+              <div className="w-16 h-16 sm:w-24 sm:h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-custom-xl relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-                <Bot className="w-12 h-12 text-primary-foreground relative z-10" />
+                <Bot className="w-8 h-8 sm:w-12 sm:h-12 text-primary-foreground relative z-10" />
               </div>
               <div className="absolute top-full mt-3 left-1/2 transform -translate-x-1/2 text-center">
                 
