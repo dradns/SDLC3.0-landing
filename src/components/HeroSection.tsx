@@ -41,21 +41,21 @@ const HeroSection = () => {
 
           {/* Metrics Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">50-70%</div>
-              <div className="text-sm text-muted-foreground">Сокращение Lead Time</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-between">
+              <div className="text-3xl font-bold text-primary leading-none">50-70%</div>
+              <div className="text-sm text-muted-foreground mt-4">Сокращение Lead Time</div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">2-5x</div>
-              <div className="text-sm text-muted-foreground">Рост частоты деплоев</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-between">
+              <div className="text-3xl font-bold text-primary leading-none">2-5x</div>
+              <div className="text-sm text-muted-foreground mt-4">Рост частоты деплоев</div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">&lt;15%</div>
-              <div className="text-sm text-muted-foreground">Доля неудачных релизов</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-between">
+              <div className="text-3xl font-bold text-primary leading-none">&lt;15%</div>
+              <div className="text-sm text-muted-foreground mt-4">Доля неудачных релизов</div>
             </div>
-            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-center">
-              <div className="text-3xl font-bold text-primary mb-2">2-3x</div>
-              <div className="text-sm text-muted-foreground">Сокращение MTTR</div>
+            <div className="bg-card/80 backdrop-blur-sm border border-card-border rounded-xl p-6 text-center shadow-custom-md hover:shadow-custom-lg transition-all duration-300 min-h-[120px] flex flex-col justify-between">
+              <div className="text-3xl font-bold text-primary leading-none">2-3x</div>
+              <div className="text-sm text-muted-foreground mt-4">Сокращение MTTR</div>
             </div>
           </div>
         </div>
