@@ -184,10 +184,4 @@
     background-clip: text;
     animation: gradient-wave 3s ease-in-out infinite;
   }
-  
-  .letter-animation {
-    display: inline-block;
-    opacity: 0;
-    animation: letter-fade-in 0.8s ease-out forwards;
-  }
 }

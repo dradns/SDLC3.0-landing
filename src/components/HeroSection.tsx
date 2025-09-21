@@ -35,17 +35,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
-            <span className="text-gradient-animated font-bold">
-              {"AI-ориентированный жизненный цикл разработки:".split("").map((char, index) => (
-                <span 
-                  key={index} 
-                  className="letter-animation"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </span><br />
+            <span className="text-gradient-animated font-bold">AI-ориентированный жизненный цикл разработки:</span><br />
             автоматизация, метрики, предсказуемая поставка
           </p>
 
