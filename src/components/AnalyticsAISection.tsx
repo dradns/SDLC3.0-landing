@@ -93,7 +93,7 @@ const AnalyticsAISection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            Внедрение AI инструментов <span className="text-primary">в бизнес- и системный анализ</span>
+            Внедрение AI инструментов <span className="text-gradient-animated">в бизнес- и системный анализ</span>
           </h2>
           <div className="mb-4">
             <a 
