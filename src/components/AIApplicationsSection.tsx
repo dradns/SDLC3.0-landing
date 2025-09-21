@@ -44,7 +44,7 @@ const AIApplicationsSection = () => {
   return (
     <section className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4">Сценарии применения AI</h2>
+        <h2 className="text-4xl font-bold text-center mb-4">Сценарии <span className="text-primary">применения AI</span></h2>
         <p className="text-muted-foreground text-center mb-12 text-lg max-w-3xl mx-auto">
           Практические применения искусственного интеллекта на каждом этапе 
           жизненного цикла разработки программного обеспечения.
