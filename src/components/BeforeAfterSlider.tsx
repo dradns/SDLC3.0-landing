@@ -46,7 +46,7 @@ const BeforeAfterSlider = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-gradient">До и после</span> внедрения SDLC 3.0
+            <span className="text-gradient-animated">До и после</span> внедрения SDLC 3.0
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Перемещайте слайдер, чтобы увидеть как изменяются ключевые метрики
