@@ -50,6 +50,72 @@ const CasesSection = () => {
       infraCosts: "-25%"
     }
   }];
-  return;
+
+  return (
+    <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6">
+            Кейсы внедрения <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">SDLC 3.0</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Реальные результаты команд, которые внедрили AI в свой процесс разработки
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {cases.map((caseItem, index) => {
+            const IconComponent = caseItem.icon;
+            return (
+              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="p-3 bg-primary/10 rounded-xl">
+                    <IconComponent className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">{caseItem.company}</h3>
+                    <p className="text-sm text-muted-foreground">{caseItem.industry}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-medium text-destructive mb-2">Проблема:</h4>
+                    <p className="text-muted-foreground">{caseItem.challenge}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-medium text-primary mb-2">Решение:</h4>
+                    <p className="text-muted-foreground">{caseItem.solution}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-medium text-success mb-2">Результаты:</h4>
+                    <ul className="space-y-1 text-muted-foreground">
+                      {caseItem.results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-success mt-1">•</span>
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4 pt-4 border-t">
+                    {Object.entries(caseItem.metrics).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-lg font-bold text-primary">{value}</div>
+                        <div className="text-xs text-muted-foreground">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 export default CasesSection;
