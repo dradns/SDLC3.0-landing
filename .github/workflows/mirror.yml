@@ -21,15 +21,21 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Keep target .github/workflows
+      - name: Remove local workflows
+        run: |
+          rm -rf .github/workflows
+          git add -A
+          git commit -m "chore: remove workflows from mirror" || true
+
+      - name: Restore target workflows if exist
         run: |
           git remote remove teamlead_read 2>/dev/null || true
           git remote add    teamlead_read https://github.com/${{ env.TARGET_REPO }}.git
           git fetch teamlead_read main --depth=1 || true
-          git checkout teamlead_read/main -- .github/workflows 2>/dev/null || true
-          if ! git diff --quiet; then
+          if git ls-tree -r --name-only teamlead_read/main | grep -q '^.github/workflows/'; then
+            git checkout teamlead_read/main -- .github/workflows
             git add .github/workflows
-            git commit -m "chore: keep target workflows"
+            git commit -m "chore: keep target workflows" || true
           fi
 
       - name: Push to team lead repo (main → main)
@@ -39,10 +45,8 @@ jobs:
           set -e
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git remote remove teamlead 2>/dev/null || true
           git remote add teamlead "https://x-access-token:${TARGET_TOKEN}@github.com/${{ env.TARGET_REPO }}.git"
           git remote -v | sed 's/x-access-token:.*@/x-access-token:***@/'
-
           git fetch teamlead main --depth=1 || true
           git push teamlead HEAD:main --force-with-lease
