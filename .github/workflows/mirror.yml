@@ -1,4 +1,4 @@
-name: Mirror main to team lead
+name: Mirror main to dradns
 
 on:
   push:
@@ -29,5 +29,6 @@ jobs:
           # добавляем удалённый с https + PAT
           git remote add teamlead https://x-access-token:${TARGET_TOKEN}@github.com/${TARGET_REPO}.git
 
-          # пушим только ветку main (без --force)
-          git push teamlead HEAD:main
+          # пушим только ветку main - полное обновление
+          git push teamlead HEAD:main --force
+
